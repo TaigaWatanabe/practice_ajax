@@ -17,7 +17,6 @@ $(document).ready(function(){
 			var data_id = data_json["id"];
 			var content = data_json["content"];
 
-			// 追加
 			$("#addContent").after(`
 			<div class="addContent${data_id}">
 				<h4>${content}</h4>
@@ -29,14 +28,14 @@ $(document).ready(function(){
 					</a>
 				</div>
 
-				<!-- 次回 -->
+				<!-- 追加 -->
 
 				<!-- 削除ボタン -->
 				<form action="/Delete/${data_id}" method="delete" style="display:inline;">
-					<button type="button" class="btn btn-outline-danger" onclick="deleteContent('${data_id}')">Delete</button>
+					<button type="button" class="btn btn-outline-danger" onclick="deleteContent('${data_id}')">削除</button>
 				</form>
 
-				<!-- 次回 -->
+				<!-- 追加 -->
 			</div>`);
 
 			$(".content").val("");
